@@ -134,6 +134,75 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Consulta Todas Las Mascotas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vetemovil.000webhostapp.com/mascotas/consultarAll",
+					"protocol": "https",
+					"host": [
+						"vetemovil",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"mascotas",
+						"consultarAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar una Mascota",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://vetemovil.000webhostapp.com/mascotas/eliminar/{{mascotaID}}",
+					"protocol": "https",
+					"host": [
+						"vetemovil",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"mascotas",
+						"eliminar",
+						"{{mascotaID}}"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
